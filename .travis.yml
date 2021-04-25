@@ -4,4 +4,7 @@ services:
 
 script:
   - docker build -t leanderlindahl/node .
-  - docker images leanderlindahl/node  
+  - docker images leanderlindahl/node
+
+before_deploy:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
