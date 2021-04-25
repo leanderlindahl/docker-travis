@@ -10,7 +10,7 @@ before_deploy:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
 
 deploy:
-  provide: script
+  provider: script
   script: docker push leanderlindahl/docker-travis
   on: 
     branch: master
